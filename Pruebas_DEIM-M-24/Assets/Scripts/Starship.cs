@@ -45,6 +45,10 @@ public class Starship : MonoBehaviour
         MoveStarship();
         RotateStarship();
 
+        if(Input.GetButtonDown("Fire1")) 
+        {
+            Shoot();
+        }
 
     }
 
@@ -77,5 +81,10 @@ public class Starship : MonoBehaviour
         transform.Rotate(Vector3.forward * rotationSpeed * 360f * Time.deltaTime * -rotation);
         transform.Rotate(Vector3.up * rotationSpeed * 360f * Time.deltaTime * -giro);
 
+    }
+
+    void Shoot()
+    {
+        print("PUM");
     }
 }
